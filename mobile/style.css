@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "open sans";
+	background: #f2f2f2;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.clear {
+	clear: both;
+}
+
+.page {
+	height: calc(100% - 73px);
+	position: absolute;
+	top: 73px;
+	left: 100%;
+	width: 100%;
+}
+
+.page.active {
+	left: 0;
+}
+
+.header {
+	background: #1976D2;
+	padding: 20px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	position: relative;
+}
+
+.header h2 {
+	margin: 0;
+	font-weight: 400;
+	color: #fff;
+	text-align: center;
+}
+
+.circularbuttonleft {
+	height: 35px;
+	width: 45px;
+	background: #fff;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	text-align: center;
+	color: #1976D2;
+	padding-top: 10px;
+	transition: background 0.1s;
+	cursor: pointer;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidebar a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidebar a i {
+	width: 30px;
+}
+
+.sidebar .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.boxes {
+	padding: 20px;
+}
+
+.boxes .box {
+	width: calc(50% - 10px);
+	float: left;
+	margin-bottom: 20px;
+	background: #C2185B;
+	color: #fff;
+	padding-top: 40px;
+	height: 125px;
+	text-align: center;
+	border-radius: 3px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.boxes .box .text {
+	text-transform: uppercase;
+	padding: 20px;
+	white-space: normal;
+}
+
+.boxes .box:nth-child(2n - 1) {
+	margin-right: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.page {
+	height: calc(100% - 73px);
+	position: absolute;
+	top: 73px;
+	left: 100%;
+	width: 100%;
+	overflow-y: auto;
+}
+
+.page.active {
+	left: 0;
+}
+
+.list {
+	padding: 15px 0;
+}
+
+.list .listitem {
+	padding: 20px;
+	position: relative;
+	transition: background 0.1s;
+	cursor: pointer;
+}
+
+.list .listitem .img {
+	height: 20px;
+	width: 20px;
+	background-size: cover;
+	image-rendering: pixelated;
+}
+
+.list .listitem .text {
+	position: absolute;
+	top: 12px;
+	left: 60px;
+}
+
+.list .listitem .label {
+	font-size: 11px;
+	position: absolute;
+	top: 32px;
+	left: 60px;
+}
+
+.list .listitem .number {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	color: #aaa;
+}
+
+.list .listitem:hover {
+	background: #f2f2f2;
+}
+
+.task {
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.task:hover {
+	background: #dedede !important;
+}
+
+.task:nth-child(2n) {
+	background: #f2f2f2;
+}
+
+.task.head {
+	font-weight: bold;
+	background: #fff !important;
+	cursor: auto;
+	border-bottom: 1px solid #ddd;
+}
+
+.task span {
+	display: inline-block;
+}
+
+.task span:nth-child(1) {
+	width: 60%;
+}
+
+.task span:nth-child(2) {
+	width: 40%;
+}
+
+.marker {
+	background: #fff;
+	padding: 5px 20px;
+}
+
+.form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-left: 20px;
+  position: relative;
+  top: 40px;
+}
+
+.form-group input {
+  height: 1.9rem;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: none;
+  box-sizing: border-box;
+}
+
+.form-group .input-label {
+  position: absolute;
+  top: 0.25rem;
+  pointer-events: none;
+  padding-left: 0.125rem;
+  z-index: 1;
+  color: #b3b3b3;
+  font-size: 1rem;
+  font-weight: normal;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+}
+.form-group .bar {
+  position: relative;
+  border-bottom: 0.0625rem solid #999;
+  display: block;
+}
+.form-group .bar::before {
+  content: '';
+  height: 0.125rem;
+  width: 0;
+  left: 50%;
+  bottom: -0.0625rem;
+  position: absolute;
+  background: #B73394;
+  -webkit-transition: left 0.28s ease, width 0.28s ease;
+  transition: left 0.28s ease, width 0.28s ease;
+  z-index: 2;
+}
+
+.form-group input,.form-group textarea {
+  display: block;
+  background: none;
+  padding: 0.125rem 0.125rem 0.0625rem;
+  font-size: 1rem;
+  border-width: 0;
+  border-color: transparent;
+  line-height: 1.9;
+  width: 100%;
+  color: transparent;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+  box-shadow: none;
+  white-space: normal;
+}
+
+.form-group input:focus,
+.form-group input:valid,
+.form-group input.form-file,
+.form-group input.has-value,
+.form-group textarea:focus,
+.form-group textarea:valid,
+.form-group textarea.form-file,
+.form-group textarea.has-value {
+  color: #333;
+}
+.form-group input:focus ~ .input-label,
+.form-group input:valid ~ .input-label,
+.form-group input.form-file ~ .input-label,
+.form-group input.has-value ~ .input-label,
+.form-group textarea:focus ~ .input-label,
+.form-group textarea:valid ~ .input-label,
+.form-group textarea.form-file ~ .input-label,
+.form-group textarea.has-value ~ .input-label {
+  font-size: 0.8rem;
+  color: gray;
+  top: -1rem;
+  left: 0;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+}
+.form-group input:focus ~ .input-label,
+.form-group textarea:focus ~ .input-label {
+  color: #B73394;
+}
+.form-group input:focus ~ .bar::before,
+.form-group textarea:focus ~ .bar::before {
+  width: 100%;
+  left: 0;
+}
+
+.overlay {
+	background: #fff;
+	opacity: 0.7;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10000;
+	display: none;
+}
+
+.modal {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: calc(100% - 40px);
+	height: calc(100% - 40px);
+	background: #fff;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	z-index: 100000;
+	display: none;
+}
+
+.title {
+	font-size: 16px;
+	color: #fff;
+	background: #1976D2;
+	padding: 20px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	position: relative;
+}
+
+.title .fa {
+	position: absolute;
+	top: 23px;
+	right: 15px;
+}
+
+.profile {
+	padding: 20px;
+}
+
+.profile h2 {
+	font-size: 35px;
+	font-weight: 400;
+	margin: 0;
+}
+
+.profile .label {
+	color: #aaa;
+	font-size: 20px;
+}
+
+.profile .label img {
+	margin-left: 5px;
+}
+
+.profile .phone {
+	margin-top: 5px;
+	color: #aaa;
+}
+
+.profile .scorelabel {
+	text-transform: uppercase;
+	margin-top: 20px;
+}
+
+.profile .number {
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+.profile .smallnumber {
+	color: #aaa;
+}
+
+.profile .smallnumber span {
+	color: #000;
+	font-weight: bold;
+}
+
+.profile .sentence {
+	color: #aaa;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.profile .sentence span {
+	color: #000;
+	font-weight: bold;
+}
+
+.button {
+	width: calc(33.33333% - 53.33333px);
+	float: left;
+	background: #C2185B;
+	margin-right: 20px;
+	padding: 20px;
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+	transition: background 0.1s;
+	text-align: center;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	position: relative;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.button:last-child {
+	margin-right: 0;
+}
+
+.button:hover {
+	background: #AD1457;
+}
+
+.button.green {
+	background: #388E3C;
+}
+
+.button.green:hover {
+	background: #2E7D32;
+}
